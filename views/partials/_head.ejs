@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/popup.css">
+  <link rel="stylesheet" type="text/css" href="/css/chart.css">
+  <title>DrevBoks</title>
+</head>
+
+<body>
+  <div id="mask"></div>
+  <div id="pop-up">
+    <div id="x"></div>
+    <form action="/files/upload/<%= user._id %>" method="POST" name="formUpload" id="formUpload" enctype="multipart/form-data">
+      <h1>Subir archivo</h1>
+      <p>Selecciona un archivo.</p>
+      <input type="hidden" name="_id" value="<%= user._id %>">
+      <input type="hidden" name="username" value="<%= user.username %>">
+      <input type="file" name="fileName" id="fileName"><br><br>
+      <input type="hidden" name="titulo" id="titulo">
+      <button id="uploadFile" type="submit" class="btn btn-primary">Subir archivo</button>
+    </form>
+  </div>
+
+  <div id="mask-share"></div>
+    <div id="pop-share">
+      <div id="x"></div>
+      <form action="/shares/share/<%= user._id %>" method="POST" enctype="multipart/form-data">
+      <h1>Compartir archivo</h1>
+      <p>Nombre de usuario al que deseas compartir.</p>
+      <input type="text" id="shareFile" name="shareFile" style="display: none">
+      <input type="text" name="userShare" id="userShare" class="input-share" placeholder="ej: erikrenderos"><br><br><br>
+      <button id="share" type="submit" class="btn btn-primary">Compartir</button>
+    </form>
+    </div>
+  
+  <div class="main">
+    <% include sidebar.ejs %>
+    <section>
+      <% include header.ejs %>

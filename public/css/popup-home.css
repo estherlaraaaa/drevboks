@@ -1,0 +1,67 @@
+#mask {
+  position: fixed;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#mask2 {
+  position: fixed;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#login {
+  top: 10%;
+  display: none;
+  position: fixed;
+  z-index: 9500;
+  width: 350px;
+  height: 400px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#login #inner {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+#register {
+  top: 6%;
+  display: none;
+  position: fixed;
+  z-index: 9500;
+  width: 450px;
+  height: 550px;
+  left: 0;
+  border-radius: 10px;
+  right: 0;
+  margin: 0 auto;
+}
+
+#register #inner {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}

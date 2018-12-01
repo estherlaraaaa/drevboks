@@ -1,0 +1,24 @@
+<section class="sidebar">
+      <center>
+        <div class="profile">
+          <div class="logo">
+            <a href="/dashboard"><img src="/img/logo.png"></a>
+          </div>
+
+          <div class="user">
+            <img class="user-image" src="/profile-img/<%= user.avatar %>" width="100%">
+            <h2><%= user.name %> <span class="responsive"><%= user.lastName %></span></h2>
+          </div>
+    
+
+          <div class="menu">
+            <a href="/dashboard"><i class="fa fa-folder"></i> <span class="responsive">Archivos</span></a>
+            <a href="/shares"><i class="fa fa-share-alt"></i> <span class="responsive">Compartidos</span></a>
+            <a href="/trash"><i class="fa fa-trash"></i> <span class="responsive">Papelera</span></a>
+          </div>
+        </div>
+
+        <a href="/users/settings/<%= user._id %>"><button class="btn btn-settings"><i class="fa fa-cog"></i> <span class="responsive">Configuración</span></button></a>
+        <a href="/logout"><button class="btn btn-logout"><i class="fa fa-power-off"></i> <span class="responsive">Cerrar sesión</span></button></a>
+          </center>
+    </section>

@@ -1,0 +1,136 @@
+#mask {
+  position: fixed;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#pop-up {
+  padding: 40px;
+  top: 10%;
+  display: none;
+  position: absolute;
+  z-index: 9500;
+  width: 500px;
+  height: 235px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 7px 20px 2px;
+}
+
+#pop-up #inner {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+#pop-up #x {
+  display: block;
+  position: relative;
+  float: right;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  margin: 12px 15px 0 0;
+}
+
+#pop-up #x:before,
+#pop-up #x:after {
+  content: " ";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: grey;
+  margin: 12px 0 0 0;
+  cursor: pointer;
+}
+
+#pop-up #x:before {
+  -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+#pop-up #x:after {
+  -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}
+
+/* SHARE */
+#mask-share {
+  position: fixed;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#pop-share {
+  padding: 40px;
+  top: 10%;
+  display: none;
+  position: absolute;
+  z-index: 9500;
+  width: 500px;
+  height: 235px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 7px 20px 2px;
+}
+
+#pop-share #inner {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+#pop-share #x {
+  display: block;
+  position: relative;
+  float: right;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  margin: 12px 15px 0 0;
+}
+
+#pop-share #x:before,
+#pop-share #x:after {
+  content: " ";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: grey;
+  margin: 12px 0 0 0;
+  cursor: pointer;
+}
+
+#pop-share #x:before {
+  -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+#pop-share #x:after {
+  -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}

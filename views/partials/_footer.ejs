@@ -1,0 +1,55 @@
+<section style="margin-left: -22px;" class="responsive">
+    <div class="card">
+      <center>
+        <div class="huge-chartbox">
+          <div id="failureChart1" chart-type="donut" data-chart-max="500" data-chart-segments="{ &quot;0&quot;:[&quot;0&quot;,&quot;<%= user.available %>&quot;,&quot;#19C5F5&quot;],  &quot;1&quot;:[&quot;<%= user.available %>&quot;,&quot;<%= user.space - user.available %>&quot;,&quot;#ecebeb&quot;] }" data-chart-initial-rotate="180">
+            <div class="donut-hole"><span class="donut-filling"><%= user.available %> MB</span></div>
+            <div class="donut-bite" data-segment-index="0"> </div>
+            <div class="large donut-bite" data-segment-index="1"> </div>
+            <div class="donut-caption-wrapper"><span class="donut-caption">Espacio disponible</span></div>
+          </div>
+        </div>
+      </center>
+    </div>
+    <br>
+    <div class="card" style="padding: 20px; color: gray">
+      <center>
+        © 2018 Drevboks<br>
+        <a href="" style="color: #1976D2;font-weight: bold;text-decoration: none">Trello</a>
+        <a href="" style="color: #2e3139;font-weight: bold;text-decoration: none">GitHub</a>
+      </center>
+    </div>
+    </section>
+  </div>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/juery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/popup.js"></script>
+  <script type="text/javascript" src="/js/chart.js"></script>
+<script type="text/javascript">
+  window.addEventListener("DOMContentLoaded", btnUpload);
+  function btnUpload() {
+      var btnUpload = document.getElementById("upload").addEventListener("click", cambiaValoresFile);
+  }
+
+  function cambiaValoresFile() {
+      var inputTitulo = document.getElementById("titulo");
+      inputTitulo.value = document.getElementById('fileName').files[0].name;
+  }
+</script>
+
+<script type="text/javascript">
+  window.addEventListener("DOMContentLoaded", btnUpdate);
+  function btnUpdate() {
+      var btnUpdate = document.getElementById("update").addEventListener("click", cambiaValoresImg);
+  }
+
+  function cambiaValoresImg() {
+      var inputAvatar = document.getElementById("avatar");
+      inputAvatar.value = document.getElementById('imgName').files[0].name;
+  }
+</script>
+
+</body>
+</html>

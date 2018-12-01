@@ -1,0 +1,22 @@
+<% include partials/_head.ejs %>
+<div class="container">
+  <section style="height: 80vh; display: -webkit-box;">
+    <div class="card">
+      <h3>Papelera</h3>
+      <button class="btn btn-primary" id="upload" style="float: right;padding: 11px;    margin-top: -30px;">Subir archivo</button>
+
+      <button class="btn" style="margin-right: 10px; float: right;padding: 11px;    margin-top: -30px;"><i class="fa fa-trash"></i> Eliminar definitivamente</button>
+      <br>
+      <% for(var i = 0; i < files.length; i++) {
+          if(files[i].username == user.username && files[i].status == false) {%>
+      <div class="file">
+        <a href="">
+          <i class="fa fa-file-archive"></i> <%= files[i].name %>
+        </a>
+        <a href="/statusFile/<%= files[i]._id %>"><i class="fas fa-undo-alt"></i></a>
+      </div>
+      <% } } %>
+    </div>
+  </section>
+
+<% include partials/_footer.ejs %>

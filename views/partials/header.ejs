@@ -1,0 +1,31 @@
+<header id="top-nav">
+        <div class="top-right">
+        <div class="top-user">
+
+        <% if(uploadFile){ %>
+          <h4 style="margin: 0; color: #4CAF50"><%= uploadFile %></h4>
+        <% } %>
+        <% if(NOuploadFile){ %>
+          <h4 style="margin: 0; color: #f44336"><%= NOuploadFile %></h4>
+        <% } %><% if(uploadFile){ %>
+          <h4 style="margin: 0; color: #4CAF50"><%= uploadFile %></h4>
+        <% } %>
+        <% if(shareFile){ %>
+          <h4 style="margin: 0; color: #4CAF50"><%= shareFile %></h4>
+        <% } %>
+
+        </div>
+          <div class="top-user">
+            <img src="/profile-img/<%= user.avatar %>" width="100%"> <span class="responsive"><%= user.username %></span>
+          </div>
+          <button id="upload" class="btn btn-primary">Subir archivo</button>
+        </div>
+
+        <div class="top-left">
+          <i class="fa fa-envelope"></i>
+          <div class="icon-right">
+            <input type="text" class="input-search" placeholder="Buscar archivo">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </header>

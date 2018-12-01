@@ -1,0 +1,395 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+*{
+    outline: none;
+}
+
+/*VIDEOOOOOOOOOOO*/
+/* NAVBAR */
+
+#top-header{
+   
+    padding: 0;
+    display: flow-root;
+  }
+  
+  .left{
+    margin-left: 3%;
+  }
+  
+  .left {
+    color: #8a8a8a;
+    vertical-align: -webkit-baseline-middle;
+    font-size: 20px;
+    margin-top: 7px;
+    cursor: pointer;
+  }
+  
+  .logo-principal{
+    width: 20%;
+    margin-top: 1%;
+  }
+  
+  .logo-principal img{
+    width: 60%;
+    margin-top: 5%;
+  }
+  
+  .right{
+    margin-right: 3%;
+    float: right;
+    margin-top: 1%;
+  }
+  
+  .top-btn{
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    margin-top: 5%;
+  }
+  
+  
+  .btn{
+    padding: 14px;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  .btn-home{
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+  }
+  
+  .btn-primary{
+    background: #209bff;
+    color: white;
+  }
+  
+
+header {
+    position: relative;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .header-text{
+    margin: 180px;
+    text-align: center;
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header h1{
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 5.5rem;
+    font-family: Catamaran;
+    font-weight: 800!important;
+  }
+
+  header h2{
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 3.5rem;
+    margin-top: -90px;
+    font-family: Catamaran;
+    font-weight: 800!important;
+  }
+
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   
+    z-index: 1;
+  }
+
+  /*DOS COLUMNASSSSSSSSSSSSSSSSSSSSS*/
+
+  .columna2{
+    width: 100%;
+    height: 30em;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+
+.contenedor-columna2{
+    margin-top: 5em;
+    margin: 5%;
+    margin-top: 20%;
+}
+
+.columna2 .contenedor-columna2 >p{
+    color: black;
+}
+
+.columna2 .contenedor-columna2 >h2{
+    color: black;
+}
+
+.columna2-vacio > img{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30em; 
+}
+
+/*parallaxxxxxxxxxxx*/
+
+.parallax-section{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../img/fondo.jpg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-section::before{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.3;
+    content: "";
+    width: 100%;
+    height: 30rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.parallax-section div{
+    z-index: 2;
+    grid-column-start: 2;
+}
+
+.parallax-section div >p{
+    margin-left: 2.5em;
+    color: white;
+}
+
+.parallax-section div >h2{
+    color: #42a5f5;
+}
+
+.csb{
+    margin-top: 3em;
+}
+
+@media only screen and (max-width: 900px){
+.parallax-section::before{
+    width: 100%;
+}
+
+.parallax-section{
+    grid-template-columns: 1fr;
+}
+}
+
+/*FOOTERRRRRRRRRRRRRRRRRRRRRRRRRR*/
+
+footer{
+    color: #b1b1b1;
+    padding: 40px;
+    background-color: #2e3139;  
+}
+
+
+
+/*LOGINNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
+
+.tela{
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 6px;
+}
+.inside{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center;
+}
+.inside > img {
+    padding: 10px;
+    width: 100px;
+}
+.inside .inputs .txt-logs {
+    background-color: #ececec;
+    width: 80%;
+    height: 45px;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    margin: 10px 0; 
+    padding-left: 10px;
+}
+.submit > input{
+    background-color:#209bff;
+    border:none;
+    width: 80%;
+    height: 45px;
+    border-radius: 10px;
+    color: #1d2c4fd1;
+    font-size: 1em;
+    margin-top: 15px;
+}
+.submit > input:hover{
+    background-color:#209bff;
+    cursor: pointer;
+    
+}
+.submit > p {
+    margin-top: 15px;
+}
+.submit > p > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.75em;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+/*Registro*/
+.reg{
+    width: 450px;
+    height: 550px;
+    border-radius: 6px;
+    justify-self: center;
+    align-self: center;
+}
+
+.inside-reg{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 12% 1fr 1fr;
+    justify-items: center;
+}
+.inside-reg > img {
+    padding: 10px;
+    width: 100px;
+}
+.inside-reg .inputs .txt-logs-reg {
+    background-color: #ececec;
+    width: 80%;
+    padding: 14px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+.inputs{
+    width: 100%;
+    text-align: center;
+}
+.submit{
+    width: 100%;
+    text-align: center;
+
+}
+.submit > input{
+    background-color:#209bff;
+    border:none;
+    width: 80%;
+    height: 45px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 15px;
+}
+.submit > input:hover{
+    background-color:#018dff;
+    cursor: pointer;
+    
+}
+.submit > p {
+    margin-top: 15px;
+}
+.submit > p > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.75em;
+}
+
+#login a{
+    text-decoration: none;
+    color: grey;
+    font-size: 13px;
+}
+
+#register h4{
+    width: 78%;
+    margin-top: 28px;
+    color: #50646d;
+}
+
+@media only screen and (max-width: 600px) {
+
+    header h1{
+        font-size: 2.7rem;
+    }
+
+    header h2{
+        font-size: 2rem;
+        margin-top: -25px;
+    }
+
+    .columna2{
+        grid-template-columns: 100%;
+    }
+
+    .header-text{
+        margin: 127px;
+    }
+    .contenedor-columna2{
+        display: none;
+    }
+    .logo-principal {
+        width: 45%;
+    }
+}

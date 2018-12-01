@@ -1,0 +1,105 @@
+.huge-chartbox {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 64px;
+}
+.huge-chartbox div[chart-type*="donut"] {
+  width: 160px;
+  height: 160px;
+  display: block;
+  position: relative;
+  margin-right: 115px;
+}
+.huge-chartbox div[chart-type*="donut"]:last-of-type {
+  margin-right: 0;
+}
+.huge-chartbox div.donut-hole {
+  height: 96px;
+  width: 96px;
+  background-color: #fff;
+  z-index: 20;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  border-radius: 96px;
+  line-height: 40px;
+}
+.huge-chartbox span.donut-filling {
+  position: absolute;
+  display: block;
+  vertical-align: middle;
+  font-weight: 300;
+  color: #616161;
+  font-size: 20px;
+  top: 50%;
+  margin-top: -20px;
+  width: 96px;
+  height: 40px;
+  text-align: center;
+  cursor: default;
+  overflow: none;
+}
+.huge-chartbox div.donut-caption-wrapper {
+  width: 160px;
+  align-content: center;
+  position: relative;
+  top: 195.55555556px;
+}
+.huge-chartbox span.donut-caption {
+  display: block;
+  text-align: center;
+  color: #616161;
+  font-size: 15.40740741px;
+  font-weight: 600;
+  cursor: default;
+  margin: 0 auto;
+}
+.huge-chartbox .donut-bite {
+  position: absolute;
+  width: 80px;
+  height: 160px;
+  overflow: hidden;
+  top: 0;
+  left: 80.5px;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+.huge-chartbox .donut-bite.large {
+  width: 160px;
+  height: 160px;
+  left: 0;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+.huge-chartbox .donut-bite:BEFORE {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 160px;
+  top: 0;
+  left: -80px;
+  border-radius: 80px 0 0 80px;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  -o-transform-origin: right center;
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+.huge-chartbox .donut-bite.large:BEFORE {
+  left: 0;
+}
+.huge-chartbox .donut-bite.large:AFTER {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 160px;
+  left: 80px;
+  border-radius: 0 80px 80px 0;
+}

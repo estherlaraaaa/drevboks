@@ -1,0 +1,39 @@
+<% include partials/_head.ejs %>
+<div class="container">
+  <section style="height: 80vh; display: -webkit-box;">
+    <div class="card" style="padding: 25px 30px 25px 30px;">
+      <form action="/users/settings/<%= user._id %>" name="settings" method="POST" enctype="multipart/form-data">
+        <div class="cambiar-imagen">
+          <img class="user-image" src="/profile-img/default.png" width="100%">
+          <input type="file" name="imgName" id="imgName" value="<%= user.avatar %>">
+          <input type="text" name="avatar" id="avatar" style="display: none" value="<%= user.avatar %>">
+        </div>
+
+        <label for="user">Nombre de usuario</label>
+        <span class="requerido">Requerido</span>
+        <div class="form-input">
+          <input type="text" name="username" required value="<%= user.username %>" placeholder="nombre de usuario"><br><br>
+        </div>
+
+        <label for="name">Datos Personales</label>
+        <span class="requerido">Tu nombre real es privado y no es mostrado a otros usuarios.  <i class="fas fa-lock"></i></span>
+        <div class="form-input">
+          <input type="text" name="name" id="name" required value="<%= user.name %>" placeholder="Nombre">
+          <input type="text" name="lastName" id="name" required value="<%= user.lastName %>" placeholder="Apellido">
+        </div>
+
+        <div class="form-input">
+          <label for="email"></label>
+          <input type="email" name="email" id="email" required value="<%= user.email %>" placeholder="correo electrónico"><br><br>
+        </div>
+
+        <div class="form-input">
+          <a href="/users/password/<%= user._id %>"><i class="fa fa-key"></i> Cambiar contraseña</a>
+        </div>
+
+        <button type="submit" id="update" style="float: right" class="btn btn-setting">Guardar cambios</button>
+      </form>  
+    </div>
+  </section>
+
+<% include partials/_footer.ejs %>

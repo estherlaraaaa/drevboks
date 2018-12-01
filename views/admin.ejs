@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Dropbox</title>
+</head>
+
+<body>
+  <div class="main">
+    <section class="sidebar">
+      <center>
+        <div class="profile">
+          <div class="logo">
+            <a href="dashboard.html"><img src="http://investor.mowjow.com/static/img/general/dropbox.png"></a>
+          </div>
+
+          <div class="user">
+            <img class="user-image" src="/profile-img/default.png" width="100%">
+            <h2>Administrador</h2>
+          </div>
+    
+
+          <div class="menu">
+            <a href="dashboard.html"><i class="fa fa-male"></i> <span class="responsive">Usuarios</span></a>
+          </div>
+        </div>
+
+        <a href="/dashboard"><button class="btn btn-logout"><i class="fa fa-power-off"></i> <span class="responsive"> Cerrar sesión</span></button></a>
+        </center>
+    </section>
+
+    <section>
+      <header id="top-nav">
+        <div class="top-right">
+          <div class="top-user">
+            <img src="/profile-img/default.png" width="100%"> <span class="responsive">admin</span>
+          </div>
+        </div>
+
+        <div class="top-left" style="margin-left: 0%;">
+          <div class="icon-right">
+            <input type="text" class="input-search" placeholder="Buscar archivo">
+            <i class="fa fa-search" style="margin-left: -1%"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="container" style="grid-template-columns: 100%;">
+        <section style="padding: 0px;">
+          <div class="admi">
+            <table>
+              <thead>
+                <tr>
+                  <th>Usuario</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Correo</th>
+                  <th>Genero</th>
+                  <th>Espacio</th>
+                  <th>Disponible</th>
+                  <th></th>
+                </tr>
+              </thead>
+              
+              <tbody name="filas" id="filas"></tbody>
+            </table>
+          </div>
+
+        </section>
+    </div>
+  <script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

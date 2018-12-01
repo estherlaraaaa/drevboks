@@ -1,0 +1,37 @@
+<% include partials/_head.ejs %>
+<div class="container">
+  <section style="height: 80vh; display: -webkit-box;">
+
+    <div class="card">
+      <h3>Tus archivos</h3>
+      <button class="btn btn-primary" id="upload" style="float: right;padding: 11px;    margin-top: -30px;">Subir archivo</button>
+      <select style="margin-top: -30px;">
+        <option><i class="fa fa-filter"></i>Orenar por</option>
+        <option>A - Z</option>
+        <option>Z - A</option>
+      </select>
+      <br>
+      <% for(var i = 0; i < files.length; i++) {
+          if(files[i].username == user.username && files[i].status == true) {%>
+      <div class="file">
+        <a href="">
+          <i class="fa fa-file-archive"></i> <%= files[i].name %> <span style="color:gray; font-size: 12px">・ <%= files[i].size %> MB</span>
+        </a>
+        <a href="/files/statusFile/<%= files[i]._id %>"><i class="fa fa-trash"></i></a>
+        <a onclick="return false;" id="share" name="<%= files[i].name %>"><i class="fa fa-share-alt"></i></a>
+        <a href="/<%= user.username %>/<%= files[i].name %>" download><i class="fa fa-download"></i></a>
+      </div>
+
+      <script type="text/javascript">
+
+        var btnTakes = document.getElementsByName("<%= files[i].name %>")[0].addEventListener("click", cambiaValoresTake);
+
+        function cambiaValoresTake() {
+            var inputTake = document.getElementById("shareFile");
+            inputTake.value = "<%= files[i].name %>";
+        }
+      </script>
+      <% } } %>
+    </div>
+  </section>
+<% include partials/_footer.ejs %>

@@ -1,0 +1,27 @@
+<% include partials/_head.ejs %>
+<div class="container">
+  <section style="height: 80vh; display: -webkit-box;">
+    <div class="card">
+      <h3>Compartidos</h3>
+      <button class="btn btn-primary" id="upload" style="float: right;padding: 11px;    margin-top: -30px;">Subir archivo</button>
+
+      <select style="margin-top: -30px;">
+        <option><i class="fa fa-filter"></i>Orenar por</option>
+        <option>A - Z</option>
+        <option>Z - A</option>
+      </select>
+      <br>
+      <% for(var i = 0; i < shares.length; i++) {
+          if(shares[i].from == user.username) {%>
+      <div class="file">
+        <a href="">
+          <i class="fa fa-file-archive"></i> <%= shares[i].name %>
+        </a>
+        <a href="/deleteShare/<%= shares[i]._id %>"><i class="fa fa-trash"></i></a>
+        <a href="/<%= shares[i].of %>/<%= shares[i].name %>" download><i class="fa fa-download"></i></a>
+      </div>
+      <% } } %>
+    </div>
+  </section>
+
+<% include partials/_footer.ejs %>
